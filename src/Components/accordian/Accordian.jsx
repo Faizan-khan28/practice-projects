@@ -5,15 +5,23 @@ import data from "./data";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
+  const [multiplesSelected , setmultiplesSelected] = useState(null);
 
   let singleSeleted = (getid) => {
     setSelected(getid === selected ? null : getid);
   };
-  
+
+  let multipleSelected = (getmulid) => {
+      setmultiplesSelected(getmulid === multiplesSelected ? null : getmulid);
+  }
+
+  console.log(multiplesSelected);
+
   console.log(selected);
 
   return (
-    <div className="flex justify-center items-center mt-10">
+    <div className="flex justify-center flex-col items-center mt-10">
+      <button onClick={()=> multipleSelected(data.id)} className="mb-3 bg-black text-white p-2 font-semibold cursor-pointer">Enable Multiple Accordian</button>
       <div className="flex items-center justify-center flex-col">
         {data && data.length > 0 ? (
           data.map(dataitem => (
@@ -30,6 +38,11 @@ export default function Accordian() {
                   {dataitem.answer}
                 </div>
               ) : null}
+              {
+                multiplesSelected === data.id ? <div className="flex justify-center w-[700px] px-10 mb-2 text-sm">
+                {dataitem.answer}
+              </div>  : null
+              }
             </div>
           ))
         ) : (
