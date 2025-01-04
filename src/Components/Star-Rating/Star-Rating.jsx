@@ -7,15 +7,18 @@ export default function StarRating () {
     let [hover , setHover] = useState(0);
 
     let handleOnclick = (index) => {
-        setRating(index)    
+        setRating(index)  
+        console.log(index)  
     }
 
     let handleOnmousemove = (index) => {
        setHover(index)
+       console.log(index) 
     }
 
-    let handleOnmouseleave = () => {
+    let handleOnmouseleave = (index) => {
         setHover(rating)
+        console.log(index) 
     }
 
     let stars = [1,2,3,4,5];
@@ -29,7 +32,7 @@ export default function StarRating () {
                   className={`${index <= (hover || rating) ? "text-yellow-500" : "text-black"}`}
                   onClick={()=> handleOnclick(index)}
                   onMouseMove={()=> handleOnmousemove(index)}
-                  onMouseLeave={()=> handleOnmouseleave()}
+                  onMouseLeave={()=> handleOnmouseleave(index)}
                 />
             })
            }
