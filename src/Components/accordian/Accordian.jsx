@@ -1,6 +1,16 @@
+import { useState } from "react";
 import data from "./data";
 
 export default function Accordian() {
+  let [enableOne , setEnableOne] = useState(null);
+
+
+  let handleOne = (id)=> {
+    setEnableOne((prevId)=> prevId === id ? null : id)
+  }
+
+  console.log(enableOne)
+
   return (
     <div>
       <h1 className="text-3xl font-medium flex justify-center">
@@ -12,10 +22,12 @@ export default function Accordian() {
 
       {
         data && data.map((acc)=> (
-          <div className="flex justify-center mt-4">
-           <div className="bg-blue-400 cursor-pointer text-center border to-blue-200 py-2 w-[600px]">
-             <h1>{acc.question}<span className="pl-2">+</span></h1>
-             <p>{acc.answer}</p>
+          <div key={acc.id} className="flex justify-center mt-4">
+           <div onClick={()=> handleOne(acc.id)} className="bg-blue-400 cursor-pointer text-center border to-blue-200 py-2 w-[600px]">
+             <h1>{acc.question}<span className="pl-2">+</span></h1> 
+             {
+              enableOne === acc.id ? <p>{acc.answer}</p> : null
+             }
            </div>
           </div>
         ))

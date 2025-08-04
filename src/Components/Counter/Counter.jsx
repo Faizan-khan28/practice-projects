@@ -8,6 +8,8 @@ export default function Counter () {
         setCount((prev) => prev + 1);
     }
 
+    console.log(count)
+
     let resetCount = () => {
         setCount(count = 0)
     }
