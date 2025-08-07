@@ -18,10 +18,10 @@ export default function Accordian() {
      if(findIndexOfid === -1) {
       copyMul.push(id)
      } else {
-      copyMul.splice(findIndexOfid , 1)
+      copyMul.splice(findIndexOfid , 1)                     
      }
      setMultipleID(copyMul)
-  }
+  } 
 
   return (
     <div>
