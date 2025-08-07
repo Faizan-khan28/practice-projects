@@ -14,7 +14,7 @@ export default function Accordian() {
   let handleMultiple = (id) => {
      let copyMul = [...multipleID];
      let findIndexOfid = copyMul.indexOf(id)
-     console.log(findIndexOfid)
+    //  console.log(findIndexOfid)
      if(findIndexOfid === -1) {
       copyMul.push(id)
      } else {
@@ -22,6 +22,8 @@ export default function Accordian() {
      }
      setMultipleID(copyMul)
   } 
+
+  console.log(multipleID)
 
   return (
     <div>
