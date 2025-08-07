@@ -3,12 +3,12 @@ import data from "./data";
 
 export default function Accordian() {
   let [enableOne , setEnableOne] = useState(null);
-  let [enableMultiple , setEnablMultiple] = useState(false)
+  let [enableMultiple , setEnablMultiple] = useState(false);
   let [multipleID , setMultipleID] = useState([]);
 
 
   let handleOne = (id)=> {
-    setEnableOne((prevId)=> prevId === id ? null : id)
+    setEnableOne((prevId)=> prevId === id ? null : id);
   }
 
   let handleMultiple = (id) => {
