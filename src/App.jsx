@@ -12,10 +12,10 @@ function App() {
       {/* <Counter/> */}
       
       {/* Accordian Component */}
-      <Accordian />
+      {/* <Accordian /> */}
       
       {/* Random Color Component */}
-      {/* <RandomColor/> */}
+      <RandomColor/>
 
       {/* Star Rating */}
       {/* <StarRating/> */}
