@@ -15,10 +15,10 @@ function App() {
       {/* <Accordian /> */}
       
       {/* Random Color Component */}
-      <RandomColor/>
+      {/* <RandomColor/> */}
 
       {/* Star Rating */}
-      {/* <StarRating/> */}
+      <StarRating/>
 
       {/* image Slider */}
       {/* <ImageSlider/> */}

@@ -18,7 +18,6 @@ export default function RandomColor () {
             hexColor += hex[genrateRandomColor(hex.length)]
         }
 
-        console.log(hexColor)
         setColor(hexColor)
     }
 
@@ -30,8 +29,6 @@ export default function RandomColor () {
     }
 
     console.log(color)
-
-    let handleRandomColor = () => {}
 
     return (
         <div style={{
